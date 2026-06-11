@@ -60,7 +60,7 @@ Sistem ini mengadopsi arsitektur *decoupled/micro-framework* untuk memisahkan ko
 ### 2. Langkah Kloning Proyek
 ```bash
 # Clone repositori ini ke folder root lokal kamu (misal: C:\laragon\www\)
-git clone [https://github.com/ldycessa19-blip/web_churn.git](https://github.com/username_kamu/web_churn.git)
+git clone [https://github.com/ldycessa19-blip/web_churn.git](https://github.com/ldycessa19-blip/web_churn.git)
 cd web_churn
 
 # Instalasi dependency PHP Laravel
