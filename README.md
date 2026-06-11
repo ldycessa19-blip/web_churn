@@ -1,66 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🧠 TACESSA: Customer Churn Prediction System
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Framework-Laravel%2010-%23FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/Backend-Flask%20Python-%23000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+  <img src="https://img.shields.io/badge/Algorithm-XGBoost%20%26%20Random%20Forest-%23111111?style=for-the-badge" alt="Algorithms">
+  <img src="https://img.shields.io/badge/Institution-Universitas%20Airlangga-blue?style=for-the-badge" alt="UNAIR">
 </p>
 
-## About Laravel
+## 📌 Deskripsi Penelitian
+Sistem ini merupakan implementasi perangkat lunak berbasis web dari penelitian tugas akhir/skripsi yang berjudul:  
+**"Analisis Komparasi Algoritma Random Forest dan XGBoost untuk Klasifikasi Customer Churn pada Layanan Seluler Prabayar Berbasis Website"**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Sistem **TACESSA** (Tugas Akhir Cessa) dibangun khusus untuk membantu penyedia layanan telekomunikasi dalam memetakan risiko retensi pelanggan secara *real-time* menggunakan pendekatan data science dan machine learning, baik melalui input data manual (*Single Prediction*) maupun unggah berkas massal (*Bulk Prediction*).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🤵 Informasi Peneliti
+* **Nama Peneliti:** Lady Cessa Nadinda
+* **NIM:** 434221056
+* **Program Studi:** D4 Teknik Informatika (Angkatan 2022)
+* **Fakultas:** Vokasi
+* **Institusi:** Universitas Airlangga (UNAIR)
+* **Dosen Pembimbing:** Rachman Sinatriya Marjianto, B.Eng., M.Sc.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📊 Hasil Evaluasi & Komparasi Model
+Pengujian dilakukan menggunakan baseline **IBM Telco Customer Churn Dataset** (7.043 records) dengan proporsi *data split* 80% Train dan 20% Test (1.409 data uji). Berdasarkan hasil komparasi, **XGBoost ditetapkan sebagai Champion Model** karena unggul pada seluruh metrik evaluasi utama:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Metrik Evaluasi | XGBoost (Champion Model) 🏆 | Random Forest (Ensemble) |
+| :--- | :---: | :---: |
+| **Accuracy** | **80.06%** | 77.71% |
+| **Precision** | **78.84%** | 76.32% |
+| **Recall** | **80.06%** | 77.71% |
+| **F1-Score** | **78.74%** | 76.63% |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛠️ Arsitektur Teknologi & Spesifikasi
+Sistem ini mengadopsi arsitektur *decoupled/micro-framework* untuk memisahkan komputasi berat model AI dengan antarmuka pengguna:
+1. **Frontend / Web Portal (Repositori Ini):**
+   * **Framework:** Laravel (PHP 8.x) dengan boilerplate scaffolding Laravel Breeze.
+   * **Styling Engine:** Tailwind CSS via CDN Core.
+   * **Database:** MySQL (sebagai media penyimpanan log riwayat dan kredensial autentikasi pengguna).
+   * **Chart Engine:** Chart.js (Radar Chart untuk Visualisasi Evaluasi Model).
+2. **Backend / Machine Learning API Server (External):**
+   * **Framework:** Flask API (Python 3.9+) sebagai jembatan *deployment* model biner (.pkl).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🚀 Panduan Instalasi Lokal (Deployment)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1. Prasyarat Sistem
+* PHP >= 8.1
+* Composer
+* Laragon / XAMPP (Local Web Server)
+* Node.js & NPM (Opsional jika menggunakan asset compiler bawaan)
 
-## Contributing
+### 2. Langkah Klenteng Proyek
+```bash
+# Clone repositori ini ke folder root lokal kamu (misal: C:\laragon\www\)
+git clone [https://github.com/username_kamu/web_churn.git](https://github.com/username_kamu/web_churn.git)
+cd web_churn
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Instalasi dependency PHP Laravel
+composer install
