@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAcessa - Riwayat Prediksi</title>
+    <title>PredictaTel - Riwayat Prediksi</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,7 +16,7 @@
                 <div class="w-8 h-8 bg-gradient-to-br from-red-700 to-pink-500 rounded-lg flex items-center justify-center">
                     <i class="fa-solid fa-brain text-white text-sm"></i>
                 </div>
-                <span class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-pink-500 tracking-wider">TACESSA</span>
+                <span class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-pink-500 tracking-wider">PredictaTel</span>
             </div>
             <div class="hidden md:flex items-center gap-1">
                 <a href="{{ route('churn.index') }}" class="nav-link px-4 py-2 rounded-lg text-sm font-semibold text-gray-500 hover:bg-gray-100 hover:text-red-700 transition-all">

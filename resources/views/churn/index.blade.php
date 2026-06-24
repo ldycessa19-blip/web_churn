@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAcessa - Churn Predictor System</title>
+    <title>PredictaTel - Churn Predictor System</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -17,7 +17,7 @@
                 <div class="w-8 h-8 bg-gradient-to-br from-red-700 to-pink-500 rounded-lg flex items-center justify-center">
                     <i class="fa-solid fa-brain text-white text-sm"></i>
                 </div>
-                <span class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-pink-500 tracking-wider">TACESSA</span>
+                <span class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-pink-500 tracking-wider">PredictaTel</span>
             </div>
 
             {{-- Menu Desktop --}}
@@ -87,7 +87,7 @@
         {{-- ═══════════════ SECTION: DASHBOARD ═══════════════ --}}
         <div id="section-dashboard" class="section-content">
             <header class="text-center mb-8">
-                <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-pink-500 to-red-900 tracking-wider">TACESSA</h1>
+                <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-pink-500 to-red-900 tracking-wider">PredictaTel</h1>
                 <p class="text-gray-500 mt-2 text-sm font-medium">Customer Churn Prediction System — XGBoost Champion Model</p>
             </header>
 
@@ -98,7 +98,7 @@
                         <i class="fa-solid fa-bullseye text-orange-500"></i>
                     </div>
                     <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Accuracy</p>
-                    <p class="text-3xl font-extrabold text-red-700 mt-1">80.06%</p>
+                    <p class="text-3xl font-extrabold text-red-700 mt-1">80.27%</p>
                     <p class="text-xs text-orange-400 mt-1 font-medium">XGBoost Champion</p>
                 </div>
                 <div class="bg-white rounded-2xl p-5 text-center border border-pink-100 shadow-sm hover:shadow-md transition">
@@ -106,7 +106,7 @@
                         <i class="fa-solid fa-crosshairs text-pink-500"></i>
                     </div>
                     <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Precision</p>
-                    <p class="text-3xl font-extrabold text-red-700 mt-1">78.84%</p>
+                    <p class="text-3xl font-extrabold text-red-700 mt-1">79.13%</p>
                     <p class="text-xs text-pink-400 mt-1 font-medium">XGBoost Champion</p>
                 </div>
                 <div class="bg-white rounded-2xl p-5 text-center border border-red-100 shadow-sm hover:shadow-md transition">
@@ -114,7 +114,7 @@
                         <i class="fa-solid fa-magnifying-glass text-red-500"></i>
                     </div>
                     <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Recall</p>
-                    <p class="text-3xl font-extrabold text-red-700 mt-1">80.06%</p>
+                    <p class="text-3xl font-extrabold text-red-700 mt-1">80.27%</p>
                     <p class="text-xs text-red-400 mt-1 font-medium">XGBoost Champion</p>
                 </div>
                 <div class="bg-gradient-to-br from-red-700 to-pink-600 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition">
@@ -122,7 +122,7 @@
                         <i class="fa-solid fa-trophy text-yellow-300"></i>
                     </div>
                     <p class="text-xs text-white/70 font-semibold uppercase tracking-wider">F1-Score 🏆</p>
-                    <p class="text-3xl font-extrabold text-white mt-1">78.74%</p>
+                    <p class="text-3xl font-extrabold text-white mt-1">79.15%</p>
                     <p class="text-xs text-white/60 mt-1 font-medium">Champion Metric</p>
                 </div>
             </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="space-y-5">
-                        @foreach([['Accuracy','80.06','77.71'],['Precision','78.84','76.32'],['Recall','80.06','77.71'],['F1-Score','78.74','76.63']] as $m)
+                        @foreach([['Accuracy','80.27','77.22'],['Precision','79.13','76.22'],['Recall','80.27','77.22'],['F1-Score','79.15','76.63']] as $m)
                         <div>
                             <div class="flex justify-between items-center mb-1.5">
                                 <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">{{ $m[0] }}</span>
@@ -432,7 +432,7 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-50">
-                            @foreach([['Accuracy','80.06%','77.71%'],['Precision','78.84%','76.32%'],['Recall','80.06%','77.71%'],['F1-Score','78.74%','76.63%']] as $row)
+                            @foreach([['Accuracy','80.27%','77.22%'],['Precision','79.13%','76.22%'],['Recall','80.27%','77.22%'],['F1-Score','79.15%','76.63%']] as $row)
                             <tr>
                                 <td class="py-2.5 font-medium text-gray-700">{{ $row[0] }}</td>
                                 <td class="py-2.5 text-center font-bold text-red-700">{{ $row[1] }}</td>
@@ -443,7 +443,7 @@
                     </table>
                     <div class="mt-4 p-3 bg-gradient-to-r from-red-50 to-pink-50 rounded-xl border border-red-100 text-xs text-red-700 font-medium">
                         <i class="fa-solid fa-trophy text-yellow-500 mr-2"></i>
-                        XGBoost ditetapkan sebagai Champion Model berdasarkan F1-Score tertinggi (78.74%).
+                        XGBoost ditetapkan sebagai Champion Model berdasarkan F1-Score tertinggi (79.15%).
                     </div>
                 </div>
                 <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-xl">
@@ -521,8 +521,8 @@
             data: {
                 labels: ['Accuracy','Precision','Recall','F1-Score'],
                 datasets: [
-                    { label: 'XGBoost', data: [80.06,78.84,80.06,78.74], backgroundColor: 'rgba(239,68,68,0.15)', borderColor: 'rgba(239,68,68,0.9)', borderWidth: 2, pointBackgroundColor: 'rgba(239,68,68,1)', pointRadius: 4 },
-                    { label: 'Random Forest', data: [77.71,76.32,77.71,76.63], backgroundColor: 'rgba(96,165,250,0.15)', borderColor: 'rgba(96,165,250,0.8)', borderWidth: 2, pointBackgroundColor: 'rgba(96,165,250,1)', pointRadius: 4 }
+                    { label: 'XGBoost', data: [80.27,79.13,80.27,79.15], backgroundColor: 'rgba(239,68,68,0.15)', borderColor: 'rgba(239,68,68,0.9)', borderWidth: 2, pointBackgroundColor: 'rgba(239,68,68,1)', pointRadius: 4 },
+                    { label: 'Random Forest', data: [77.22,75.98,77.22,76.35], backgroundColor: 'rgba(96,165,250,0.15)', borderColor: 'rgba(96,165,250,0.8)', borderWidth: 2, pointBackgroundColor: 'rgba(96,165,250,1)', pointRadius: 4 }
                 ]
             },
             options: {
